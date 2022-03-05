@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.float-r {
+    float: right !important;
+}
+
+.serialnumberRow {
+    width: 50px;
+}
+
+.actionBtnRowClients {
+    width: 205px;
+}
+
+.empoloyeeCountRowClient {
+    width: 100px;
+}
+
+.ActionBtnRow {
+    width: 100px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+    cursor: default;
+    padding-left: 2px;
+    color: black;
+    padding-right: 5px;
+}
