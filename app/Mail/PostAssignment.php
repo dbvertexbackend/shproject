@@ -10,7 +10,7 @@ use Illuminate\Queue\SerializesModels;
 class PostAssignment extends Mailable
 {
     use Queueable, SerializesModels;
-
+    protected  $data;
     /**
      * Create a new message instance.
      *
@@ -18,7 +18,7 @@ class PostAssignment extends Mailable
      */
     public function __construct()
     {
-        //
+        $this->data = $infos;
     }
 
     /**
@@ -28,6 +28,8 @@ class PostAssignment extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        $data = $this->data;
+        return $this->subject($this->data['title'])
+                    ->view('Mails.PostAssignment', $data);
     }
 }
